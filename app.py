@@ -1,6 +1,7 @@
 from flask import Flask, request
 from transitions.extensions import GraphMachine
 import requests
+import os
 #import pygraphviz
 import pymongo
 import ssl
@@ -8,9 +9,10 @@ import ssl
 from fsm import *
 from joke_fact_generator import *
 
+MANGODB_PASS = os.environ.get('MANGODB_PASSWORD')
+MANGODB_USER = os.environ.get('MANGODB_USER')
 
-
-myClient = pymongo.MongoClient(f"mongodb://nikitagalayda:5TGJmnL6Qr4H7Y4B@mapdata-shard-00-00-hmafm.mongodb.net:27017,mapdata-shard-00-01-hmafm.mongodb.net:27017,mapdata-shard-00-02-hmafm.mongodb.net:27017/test?ssl=true&replicaSet=MapData-shard-0&authSource=admin&retryWrites=true")
+myClient = pymongo.MongoClient(f"mongodb://{MANGODB_USER}:{MANGODB_PASSWORD}B@mapdata-shard-00-00-hmafm.mongodb.net:27017,mapdata-shard-00-01-hmafm.mongodb.net:27017,mapdata-shard-00-02-hmafm.mongodb.net:27017/test?ssl=true&replicaSet=MapData-shard-0&authSource=admin&retryWrites=true")
 db = myClient['tainan']
 myCol = db['Interesting spots']
 
