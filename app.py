@@ -1,7 +1,7 @@
 from flask import Flask, request
 from transitions.extensions import GraphMachine
 import requests
-import pygraphviz
+#import pygraphviz
 import pymongo
 import ssl
 
@@ -27,7 +27,7 @@ app = Flask(__name__)
 
 state_machine = StateMachine(states = states, transitions = transitions, initial = 'init')
 FunMaker = FunGenerator(0, 0)
-state_machine.get_graph().draw('my_graph.png', prog = 'dot')
+#state_machine.get_graph().draw('my_graph.png', prog = 'dot')
 @app.route('/', methods=['GET'])
 def verify():
 	mode = request.args.get("hub.mode")
