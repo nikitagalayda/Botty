@@ -1,4 +1,4 @@
-from transitions.extensions import Machine
+from transitions import Machine
 #import pygraphviz
 
 from joke_fact_generator import *
