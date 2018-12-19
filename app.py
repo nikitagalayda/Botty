@@ -10,7 +10,8 @@ from fsm import *
 from joke_fact_generator import *
 
 MANGODB_PASS = os.environ.get('MANGODB_PASSWORD')
-MANGODB_USER = os.environ.get('MANGODB_USER')
+MANGODB_USER = os.environ.get('MANGODB_USERNAME')
+
 
 myClient = pymongo.MongoClient(f"mongodb://{MANGODB_USER}:{MANGODB_PASSWORD}B@mapdata-shard-00-00-hmafm.mongodb.net:27017,mapdata-shard-00-01-hmafm.mongodb.net:27017,mapdata-shard-00-02-hmafm.mongodb.net:27017/test?ssl=true&replicaSet=MapData-shard-0&authSource=admin&retryWrites=true")
 db = myClient['tainan']
@@ -21,9 +22,9 @@ myCol = db['Interesting spots']
 
 
 
-VERIFY_TOKEN = 'fnmwrVVGgPmzemxCybgm'
-PAGE_ACCESS_TOKEN = 'EAAcQhmw8YNkBALVwhN1bZAZCBP5MHfB69qZABl9sqXT6gl6Yo3hy5MPPAyu4ABZBIrIp0PsEho9R1ymrOQIoB2x0o3JSqs8I636p1jSdCcjnH0kMjM2O2ZCfiGghpJS4NK1KTQ0ErpoOpprMAmJ94knoZBzUAh6mblMMmp2Mm4XjTTGra6uIgm'
-FB_API_URL = 'https://graph.facebook.com/v2.6/me/messages'#?access_token=EAAcQhmw8YNkBALVwhN1bZAZCBP5MHfB69qZABl9sqXT6gl6Yo3hy5MPPAyu4ABZBIrIp0PsEho9R1ymrOQIoB2x0o3JSqs8I636p1jSdCcjnH0kMjM2O2ZCfiGghpJS4NK1KTQ0ErpoOpprMAmJ94knoZBzUAh6mblMMmp2Mm4XjTTGra6uIgm'
+VERIFY_TOKEN = os.environ.get('VERIFICATION_TOKEN')
+PAGE_ACCESS_TOKEN = os.environ.get('PAGE_ACCESS_TOKEN')
+FB_API_URL = 'https://graph.facebook.com/v2.6/me/messages'
 
 app = Flask(__name__)
 
