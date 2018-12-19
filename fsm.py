@@ -1,4 +1,4 @@
-from transitions.extensions import GraphMachine
+from transitions.extensions import Machine
 #import pygraphviz
 
 from joke_fact_generator import *
@@ -38,7 +38,7 @@ transitions = [
 	{'trigger': 'goto_init', 'source': 'satisfy_check', 'dest': 'init'}
 	]
 
-class StateMachine(GraphMachine):
+class StateMachine():
 	def __init__(self, **machine_settings):
-		self.machine = GraphMachine(model = self, **machine_settings)
+		self.machine = Machine(model = self, **machine_settings)
 		
