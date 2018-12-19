@@ -13,6 +13,7 @@ When starting the conversation with Botty, you can either greet her, ask for a j
 3. **Fun fact:** Similar to the joke, "Tell me a fun fact", or "I want to hear something interesting" will prompt Botty to
 4. **Ask her what she can do:** "What can you do?", "Tell me what you can do" or any variant with "can do" will prompt Botty to tell you about her abilities. 
 5. **Find a place:** "Can you find somewhere for me to go?", "I want to go somewhere", "I'm looking for a place to go to" or similar variants.
+6. **Restart:** Remember, you can always restart the conversation with botty by saying "Restart" or "start over".
 
 After you request botty to find a place for you to go to, she will present you with 3 choices (parks, museums, or historic sites). You may choose one of them, which will prompt Botty to further give you additional 3 choices in the category of your choice (meaning if you chose parks, she will present 3 parks in Tainan for you to choose). Finally, after you choose a specific place, Botty will provide you the address, and a Google Maps link to that place!
 
