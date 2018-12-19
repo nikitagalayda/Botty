@@ -13,7 +13,7 @@ MANGODB_PASS = os.environ.get('MANGODB_PASSWORD')
 MANGODB_USER = os.environ.get('MANGODB_USERNAME')
 
 
-myClient = pymongo.MongoClient(f"mongodb://{MANGODB_USER}:{MANGODB_PASS}B@mapdata-shard-00-00-hmafm.mongodb.net:27017,mapdata-shard-00-01-hmafm.mongodb.net:27017,mapdata-shard-00-02-hmafm.mongodb.net:27017/test?ssl=true&replicaSet=MapData-shard-0&authSource=admin&retryWrites=true")
+myClient = pymongo.MongoClient(f"mongodb://{MANGODB_USER}:{MANGODB_PASS}@mapdata-shard-00-00-hmafm.mongodb.net:27017,mapdata-shard-00-01-hmafm.mongodb.net:27017,mapdata-shard-00-02-hmafm.mongodb.net:27017/test?ssl=true&replicaSet=MapData-shard-0&authSource=admin&retryWrites=true")
 db = myClient['tainan']
 myCol = db['Interesting spots']
 
