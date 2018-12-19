@@ -1,0 +1,6 @@
+Flask==0.12.2
+requests==2.20.1
+transitions==0.6.9
+certifi
+--upgrade certifi
+pymongo[tls,srv]
