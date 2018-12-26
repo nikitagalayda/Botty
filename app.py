@@ -75,7 +75,7 @@ def parsed_user_message(msg):
 				else:
 					continue
 
-	if any(word in msg.lower() == '/help'):
+	if msg.lower() == '/help':
 		state_machine.help()
 		return "You asked for help?"
 	# Get back to init state from any other state
