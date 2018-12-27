@@ -5,8 +5,6 @@ from joke_fact_generator import *
 
 states = ['init', 'joke', 'fun_fact', 'request', 'parks', 'museums', 'historic_sites', 'satisfy_check', 'help_state']
 transitions = [
-	{'trigger': 'help', 'source': 'init', 'dest': 'help_state'},
-
 	{'trigger': 'goto_init', 'source': 'init', 'dest': 'init'},
 
 	{'trigger': 'make_joke', 'source': 'init', 'dest': 'joke'},
