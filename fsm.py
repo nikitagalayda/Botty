@@ -3,7 +3,7 @@ from transitions import Machine
 
 from joke_fact_generator import *
 
-states = ['init', 'joke', 'fun_fact', 'request', 'parks', 'museums', 'historic_sites', 'satisfy_check', 'help_state']
+states = ['init', 'joke', 'fun_fact', 'request', 'parks', 'museums', 'historic_sites', 'satisfy_check']
 transitions = [
 	{'trigger': 'goto_init', 'source': 'init', 'dest': 'init'},
 
